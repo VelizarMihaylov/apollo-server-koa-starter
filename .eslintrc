@@ -2,8 +2,10 @@
     "extends": [
       "standard"
     ],
+    "parser": "@typescript-eslint/parser",
     "plugins": [
-      "jest"
+      "jest",
+      "@typescript-eslint"
     ],
     "rules": {
       "no-multiple-empty-lines": [

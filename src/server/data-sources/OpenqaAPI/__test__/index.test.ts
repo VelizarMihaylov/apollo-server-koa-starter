@@ -1,6 +1,5 @@
 import OpenqaAPI from '../index'
 
-
 describe('OpenqaAPI', () => {
   it('should return cities when called with country', async () => {
     const cities = [
@@ -14,11 +13,14 @@ describe('OpenqaAPI', () => {
 
     const API = new OpenqaAPI()
 
-    jest.spyOn(API, 'get').mockImplementation(() => new Promise(function (resolve, reject) {
-      setTimeout(function () {
-        resolve({ results: cities })
-      }, 300)
-    }))
+    jest.spyOn(API, 'fetchCities').mockImplementation(
+      () =>
+        new Promise(function(resolve) {
+          setTimeout(function() {
+            resolve({ results: cities })
+          }, 300)
+        })
+    )
 
     const result = await API.getCities('GB')
 
