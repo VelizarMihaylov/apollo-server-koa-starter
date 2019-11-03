@@ -1,0 +1,27 @@
+{
+    "extends": [
+      "standard"
+    ],
+    "plugins": [
+      "jest"
+    ],
+    "rules": {
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2,
+          "maxEOF": 1
+        }
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ]
+    },
+    "env": {
+      "jest/globals": true
+    }
+}
