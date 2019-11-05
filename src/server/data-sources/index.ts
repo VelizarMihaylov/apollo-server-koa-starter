@@ -1,5 +1,3 @@
 import OpenqaAPI from './OpenqaAPI'
 
-export {
-  OpenqaAPI
-}
+export { OpenqaAPI }

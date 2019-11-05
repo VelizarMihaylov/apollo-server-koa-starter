@@ -1,29 +1,31 @@
 {
-    "extends": [
-      "standard"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2,
+        "maxEOF": 1
+      }
     ],
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "jest",
-      "@typescript-eslint"
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
     ],
-    "rules": {
-      "no-multiple-empty-lines": [
-        "error",
-        {
-          "max": 2,
-          "maxEOF": 1
-        }
-      ],
-      "prefer-const": [
-        "error",
-        {
-          "destructuring": "any",
-          "ignoreReadBeforeAssign": false
-        }
-      ]
-    },
-    "env": {
-      "jest/globals": true
-    }
+    "react/prop-types": [
+      0
+    ]
+  }
 }

@@ -6,7 +6,7 @@ import { ApolloServer } from 'apollo-server-koa'
 const server = new ApolloServer({
   resolvers,
   typeDefs,
-  dataSources: () => ({
+  dataSources: (): { openqaAPI: OpenqaAPI } => ({
     openqaAPI: new OpenqaAPI()
   })
 })
