@@ -1,4 +1,5 @@
 {
+  "javascript.validate.enable": false,
   "[javascript]": {
     "editor.formatOnSave": false
   },
@@ -7,6 +8,7 @@
     },
   "eslint.autoFixOnSave": true,
   "cSpell.words": [
-    "Openqa"
+    "Openqa",
+    "flowtype"
   ]
 }

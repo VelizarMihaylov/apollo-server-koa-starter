@@ -15,8 +15,8 @@ describe('OpenqaAPI', () => {
 
     jest.spyOn(API, 'fetchCities').mockImplementation(
       () =>
-        new Promise(function(resolve) {
-          setTimeout(function() {
+        new Promise(function (resolve) {
+          setTimeout(function () {
             resolve({ results: cities })
           }, 300)
         })

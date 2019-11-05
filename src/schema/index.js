@@ -1,13 +1,18 @@
+// @flow
 import { cities, City } from './queries/Cities'
 
-export const resolvers = {
+import type { Cities } from './queries/Cities'
+
+type Resolvers = { Query: { cities: Cities } }
+
+export const resolvers: Resolvers = {
   Query: {
     cities
   }
 }
 
 // Construct a schema, using GraphQL schema language
-export const typeDefs = `
+export const typeDefs: string = `
   ${City}
 
   type Query {
