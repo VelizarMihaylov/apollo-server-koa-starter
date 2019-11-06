@@ -6,8 +6,9 @@
   "author": "VelizarMihaylov <velizar.mihaylov@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src --out-dir lib --extensions '.ts'",
-    "start": "nodemon",
+    "build": "rimraf ./lib && babel --extensions '.ts' src --out-dir lib",
+    "start:prod": "node ./lib/index.js",
+    "start:dev": "nodemon",
     "test": "yarn jest"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "@babel/preset-typescript": "^7.6.0",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
+    "babel-plugin-module-resolver": "^3.2.0",
     "babel-preset-env": "^1.7.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.4.0",
@@ -51,6 +53,6 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@src": "src/"
+    "@src": "src"
   }
 }

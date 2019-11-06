@@ -6,7 +6,9 @@ class OpenqaAPI extends RESTDataSource {
   constructor() {
     super()
     this.baseURL = 'https://api.openaq.org/v1/'
-    this.fetchCities = async (query: string): Promise<{ results: { name: string }[] }> => await this.get(query)
+    this.fetchCities = async (
+      query: string
+    ): Promise<{ results: { name: string }[] }> => await this.get(query)
   }
 
   async getCities(country: string): Promise<{ name: string }[]> {

@@ -11,7 +11,8 @@ export const cities: {
       }
     }
   ): Promise<{ name: string }[]>
-} = async (obj: null, { country }, { dataSources: { openqaAPI } }) => openqaAPI.getCities(country)
+} = async (obj: null, { country }, { dataSources: { openqaAPI } }) =>
+  openqaAPI.getCities(country)
 
 export const City = `
 # A city in a town
