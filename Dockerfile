@@ -1,7 +1,5 @@
 FROM node:12.13.0-alpine
 
-ADD VERSION .
-
 ARG NODE_ENV=development
 ARG PORT=4444
 ENV NODE_ENV=${NODE_ENV}
