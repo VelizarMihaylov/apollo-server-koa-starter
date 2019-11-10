@@ -9,7 +9,9 @@
     "build": "rimraf ./lib && babel --extensions '.ts' src --out-dir lib",
     "start:prod": "node ./lib/index.js",
     "start:dev": "nodemon",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "lint": "eslint '**/*.ts'",
+    "docker:build": "./build.sh"
   },
   "dependencies": {
     "@types/jest": "^24.0.21",
